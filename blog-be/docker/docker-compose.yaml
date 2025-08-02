@@ -1,22 +1,22 @@
 services:
-  db:
+  db-dev:
     image: postgres:latest
-    container_name: db
+    container_name: db-dev
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: hongdat10
       POSTGRES_DB: blog-dev
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data_dev:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
-      - postgres
+      - postgres-dev
 
 networks:
-  postgres:
+  postgres-dev:
     driver: bridge
 
 volumes:
-  postgres_data:
+  postgres_data_dev:
     driver: local

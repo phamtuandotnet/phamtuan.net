@@ -11,8 +11,16 @@ const nextConfig: NextConfig = {
         protocol: 'http',
         hostname: '127.0.0.1',
       },
+      {
+        protocol: 'https',
+        hostname: 'api.phamtuan.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dev.api.phamtuan.net',
+      },
     ],
-  }
+  },
   /* config options here */
 };
 
